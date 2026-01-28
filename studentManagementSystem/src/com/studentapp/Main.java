@@ -8,7 +8,7 @@ public class Main {
 		
 		Student s1; //reference variable  which stores the unique Identification or Hash code of the object created in Heap memory
 		s1 = new Student("Ajay", 22, "S-1");  // variable inside the method are called as local variable and store in stack memory
-		s1.enrollCouse("Java");
+		s1.enrollCouse("Java"); // course should be unique, same student cannot enrolled in the 
 		
 		s1.enrollCouse("Java");
 		s1.enrollCouse("Java");

@@ -37,8 +37,14 @@ public class Student {
 	}
 
 	public void enrollCouse(String course) {
+		
+		if (courses.contains(course)) {
+			System.err.println("Student is already Enrolled to the course "  +course);
+		} else {
+		
 		courses.add(course);
 		System.out.println("Student is enrolled to "+ course +" successfully");
+	}
 	}
 	
 	public void printStudentInfo() {
