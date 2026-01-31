@@ -10,16 +10,23 @@ public class Main {
 		s1 = new Student("Ajay", 22, "S-1");  // variable inside the method are called as local variable and store in stack memory
 		s1.enrollCouse("Java"); // course should be unique, same student cannot enrolled in the 
 		
-		s1.enrollCouse("Java");
-		s1.enrollCouse("Java");
-		s1.enrollCouse("Java");
-		s1.enrollCouse("Java");
+		s1.enrollCouse("DSA");
+		s1.enrollCouse("DevOps");
+		s1.enrollCouse("C#");
+		s1.enrollCouse("JS");
+		
 		
 		//  this is an object whenever an object is created three things are bound to help
 		// class will be loaded in particular memory
 		//Instance variable is created 
 		//constructor will be called
-		System.out.println(s1);
+//		System.out.println(s1);
+		s1.printStudentInfo();
+		
+		
+		Student s2 = new Student("Ajit",234,"S-123");
+		s2.enrollCouse("Java");
+		s2.printStudentInfo();
 
 	}
 

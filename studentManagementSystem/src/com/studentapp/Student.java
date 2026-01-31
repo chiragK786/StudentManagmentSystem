@@ -37,13 +37,16 @@ public class Student {
 	}
 
 	public void enrollCouse(String course) {
+		if (validateCourse(course )) {
 		
-		if (courses.contains(course)) {
-			System.err.println("Student is already Enrolled to the course "  +course);
+		if (!courses.contains(course) ) {
+			courses.add(course);
+			System.out.println("Student is enrolled to "+ course +" successfully");
+			
 		} else {
 		
-		courses.add(course);
-		System.out.println("Student is enrolled to "+ course +" successfully");
+			System.err.println("Student is already Enrolled to the course "  +course);
+	}
 	}
 	}
 	
@@ -86,6 +89,17 @@ public class Student {
 		}
 		else {
 			System.err.println("Invlid name !!!! Please enter Alphabets only");
+			return false;
+		}
+	}
+	
+	public boolean validateCourse(String course) {
+		if (course.equalsIgnoreCase("Java")||course.equalsIgnoreCase("DSA")||course.equalsIgnoreCase("DevOPs")) {
+			return true;
+			
+		}
+		else {
+			System.err.println("Invalid Couser Name!!!!, Please Select Course from List !!![Java,DSA,DevOps]");
 			return false;
 		}
 	}
