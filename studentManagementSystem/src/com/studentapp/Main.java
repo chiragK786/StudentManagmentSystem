@@ -12,8 +12,8 @@ public class Main {
 		
 		s1.enrollCouse("DSA");
 		s1.enrollCouse("DevOps");
-		s1.enrollCouse("C#");
-		s1.enrollCouse("JS");
+//		s1.enrollCouse("C#");
+//		s1.enrollCouse("JS");
 		
 		
 		//  this is an object whenever an object is created three things are bound to help
@@ -24,9 +24,13 @@ public class Main {
 		s1.printStudentInfo();
 		
 		
-		Student s2 = new Student("Ajit",234,"S-123");
+		Student s2 = new Student("Ajit",24,"S-123");
 		s2.enrollCouse("Java");
 		s2.printStudentInfo();
+		
+		Student s3 = new Student("Aj",34,"S-23");
+		s3.enrollCouse("DSA");
+		s3.printStudentInfo();
 
 	}
 
