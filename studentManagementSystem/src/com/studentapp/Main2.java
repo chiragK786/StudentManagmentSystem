@@ -1,6 +1,8 @@
 package com.studentapp;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main2 {
@@ -35,7 +37,7 @@ public class Main2 {
 		s2.enrollCouse("Java");
 
 		
-		Student s3 = new Student("Aj",34,"S-23");
+		Student s3 = new Student("Bishan",34,"S-23");
 		s3.enrollCouse("DSA");
 		
 		studentList.add(s1);
@@ -44,9 +46,25 @@ public class Main2 {
 		
 		Student result = findStudentById("S-23");
 		System.out.println("Result " + result);
+		sortByName();
 
 	}
 	
+	private static void sortByName() {
+		// TODO Auto-generated method stub
+		Comparator<Student>  studentNameComparator = new Comparator<Student>() {
+
+			@Override
+			public int compare(Student o1, Student o2) {
+				// TODO Auto-generated method stub
+				return o1.getName().compareTo(o2.getName());  // this comparison done by Lexographically
+			}
+			
+		};
+		Collections.sort(studentList,studentNameComparator);
+		System.out.println(studentList);
+	}
+
 	public static Student findStudentById(String studentId ) {
 	Student result = null;	
 	
@@ -57,7 +75,7 @@ public class Main2 {
 		System.err.println("Student with ID " + studentId+ " not found !!");
 	}
 	return result;
-		
+	
 	}
 
 }
