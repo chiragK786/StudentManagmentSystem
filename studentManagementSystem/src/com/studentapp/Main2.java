@@ -52,15 +52,16 @@ public class Main2 {
 	
 	private static void sortByName() {
 		// TODO Auto-generated method stub
-		Comparator<Student>  studentNameComparator = new Comparator<Student>() {
+		Comparator<Student>  studentNameComparator = (o1,o2) -> o1.getName().compareTo(o2.getName());
 
-			@Override
+				/*	@Override
 			public int compare(Student o1, Student o2) {
 				// TODO Auto-generated method stub
 				return o1.getName().compareTo(o2.getName());  // this comparison done by Lexographically
 			}
 			
 		};
+		*/
 		Collections.sort(studentList,studentNameComparator);
 		System.out.println(studentList);
 	}
