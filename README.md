@@ -1,5 +1,7 @@
 Student Management System
+
 Java Console Application
+
 📌 Project Overview
 
 The Student Management System is a Java-based console application designed to demonstrate a solid understanding of Core Java fundamentals, Object-Oriented Programming (OOP) principles, collections, and exception handling.
